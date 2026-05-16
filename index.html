@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaahiroh - Engineering Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Zaahiroh, a Software Engineering Technology student passionate about web and mobile app development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                ZAA<span>PORTFOLIO</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <ul class="nav-links desktop-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Toggle -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal fade-up">
+                    <p class="greeting font-mono">Hello, I am</p>
+                    <h1 class="title">
+                        Zaa<span class="gradient-text">hiroh</span>
+                    </h1>
+                    <p class="description">
+                        A Software Engineering Technology student who is passionate about mobile app development is studying the subject and
+                        practicing to become a professional web developer.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper reveal fade-in">
+                    <div class="image-frame">
+                        <img src="media/zaa.jpg" alt="Profile of Zaahiroh"
+                            crossorigin="anonymous">
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about bg-darker">
+            <div class="container">
+                <div class="section-header reveal fade-right">
+                    <i data-lucide="user" class="icon-accent"></i>
+                    <h2>About Me</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text reveal fade-up">
+                        <p>
+                            I am a second-semester student majoring in Software Engineering Technology. I am particularly interested in web
+                            development and mobile app development. My interest in these fields began when I became
+                            curious about how websites and apps are built, and I also wanted to understand the systems
+                            that power them.
+                        </p>
+                        <p>
+                            I am studying to become a full-stack developer. During my time in college, I have learned a
+                            lot of new things and have been consistently working on exercises related to my major.
+                        </p>
+
+                        <div class="about-cards">
+                            <div class="card">
+                                <h3>Education</h3>
+                                <p>D4 Software Engineering<br>Politeknik IDN</p>
+                            </div>
+                            <div class="card">
+                                <h3>Interest</h3>
+                                <p>Web Development, Mobile App,<br>AI & Robotica</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-image reveal zoom-in">
+                        <div class="image-box">
+                            <img src="https://picsum.photos/seed/lab/800/450" alt="Laboratory" crossorigin="anonymous">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header reveal fade-right">
+                    <i data-lucide="briefcase" class="icon-accent"></i>
+                    <h2>Projects</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal fade-up" style="transition-delay: 0.1s;">
+                        <div class="project-image">
+                            <img src="media/teatales.png" alt="TeaTales+" crossorigin="anonymous">
+                            <div class="hover-overlay">
+                                <a href="https://youtu.be/l3w_NgweD8c" aria-label="External Link"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>TeaTales+</h3>
+                            <p>A reflective story sharing website, a website with a relaxed appearance and also
+                                interaction between people.</p>
+                            <div class="tags font-mono">
+                                <span>Laravel</span><span>Tailwind</span><span>JS</span><span>PHP</span><span>Livewire</span><span>Filament</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal fade-up" style="transition-delay: 0.2s;">
+                        <div class="project-image">
+                            <img src="media/drone.jpg" alt="Drone Underwater"
+                                crossorigin="anonymous">
+                            <div class="hover-overlay">
+                                <a href="https://canva.link/qtap2gzoqb2x37h" aria-label="External Link"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Drone Underwater</h3>
+                            <p>An underwater drone equipped with three sensors (water density, dissolved substances, and temperature). It features a real-time dashboard displaying the drone's sensors.</p>
+                            <div class="tags font-mono">
+                                <span>Arduino</span><span>Firebase</span><span>IoT</span><span>C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal fade-up" style="transition-delay: 0.3s;">
+                        <div class="project-image">
+                            <img src="media/portfolio.png" alt="Portfolio Simple"
+                                crossorigin="anonymous">
+                            <div class="hover-overlay">
+                                <a href="https://youtu.be/l0ZZ4VoyXwE" aria-label="External Link"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Simple</h3>
+                            <p>A simple portfolio that contains information about ourselves, including personal data,
+                                experience, skills, projects worked on, and contacts.</p>
+                            <div class="tags font-mono">
+                                <span>JS</span><span>Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills bg-darker">
+            <div class="container">
+                <div class="section-header reveal fade-right">
+                    <i data-lucide="wrench" class="icon-accent"></i>
+                    <h2>Skills</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Tech Skills -->
+                    <div class="skill-category reveal fade-up" style="transition-delay: 0.1s;">
+                        <div class="category-header">
+                            <i data-lucide="code-2" style="color: #818cf8;"></i>
+                            <h3>Tech Skills</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>HTML</span><span>CSS</span><span>MySQL</span><span>Tailwind</span>
+                            <span>Bootstrap</span><span>PHP</span><span>Laravel</span><span>Flutter</span>
+                            <span>Dart</span><span>Firebase</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category reveal fade-up" style="transition-delay: 0.2s;">
+                        <div class="category-header">
+                            <i data-lucide="wrench" style="color: #60a5fa;"></i>
+                            <h3>Tools</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>GitHub</span><span>VSCode</span>
+                        </div>
+                    </div>
+
+                    <!-- Design -->
+                    <div class="skill-category reveal fade-up" style="transition-delay: 0.3s;">
+                        <div class="category-header">
+                            <i data-lucide="globe" style="color: #c084fc;"></i>
+                            <h3>Design</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>Canva</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category reveal fade-up" style="transition-delay: 0.4s;">
+                        <div class="category-header">
+                            <i data-lucide="user" style="color: #34d399;"></i>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span>Communication</span><span>Teamwork</span><span>Problem Solving</span>
+                            <span>Critical Thinking</span><span>Emotional
+                                Intelligence</span><span>Open-mindedness</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header reveal fade-right">
+                    <i data-lucide="mail" class="icon-accent"></i>
+                    <h2>Contact Me</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal fade-up">
+                        <h3>My Contact & Social Media</h3>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="icon-box">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <span>zaa63756@email.com</span>
+                            </div>
+
+                            <div class="social-links">
+                                <a href="https://github.com/zaaluuv" class="social-icon" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/zaahiroh" class="social-icon"
+                                    aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="https://instagram.com/zwoify" class="social-icon"
+                                    aria-label="LinkedIn">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="http://youtube.com/@sntxdline" class="social-icon"
+                                    aria-label="LinkedIn">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="http://youtube.com/@zwoify" class="social-icon"
+                                    aria-label="LinkedIn">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="year"></span> Zaahiroh's Portfolio</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize script -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
