@@ -74,6 +74,91 @@ if (contactForm) {
     });
 }
 
+// Certificate Carousel
+const carouselTrack = document.getElementById('carousel-track');
+const prevBtn = document.getElementById('carousel-prev');
+const nextBtn = document.getElementById('carousel-next');
+const dotsContainer = document.getElementById('carousel-dots');
+
+if (carouselTrack) {
+    const cards = carouselTrack.querySelectorAll('.carousel-card');
+    const totalSlides = cards.length;
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function goToSlide(index) {
+        currentIndex = index;
+        carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        goToSlide((currentIndex + 1) % totalSlides);
+    }
+
+    function prevSlide() {
+        goToSlide((currentIndex - 1 + totalSlides) % totalSlides);
+    }
+
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+    });
+
+    let startX = 0;
+    let isDragging = false;
+
+    carouselTrack.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? nextSlide() : prevSlide();
+            resetAutoPlay();
+        }
+        isDragging = false;
+    }, { passive: true });
+
+    // Auto-play
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 10000);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    }
+
+    startAutoPlay();
+
+    // Pause on hover
+    const wrapper = document.querySelector('.carousel-wrapper');
+    wrapper.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+    wrapper.addEventListener('mouseleave', startAutoPlay);
+}
+
 // Scroll Reveal Animations
 const revealElements = document.querySelectorAll('.reveal');
 
